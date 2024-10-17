@@ -51,4 +51,4 @@ Estrutura do Banco:
 - Dessa ate o final da pagina e aperte **Importar**.
 - No menu superior clique em **Estrutura**, depois **clientes_tb** (abaixo de **Tabela**).
 
-- Adicione a pasta */crud* ao */xampp/htdocs* e abra no navegador ***localhost/crud***.
+- Adicione a pasta do crud ao */xampp/htdocs* e abra no navegador ***localhost***.
