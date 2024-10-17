@@ -41,12 +41,14 @@ Estrutura do Banco:
   * telefone_cliente - VARCHAR(255) NOT NULL
   * endereco_cliente - VARCHAR(255) NOT NULL
 
--Para exportar o banco de dados basta dar Start no Mysql pelo XAMPP e clicar em Admin.
--No phpMyAdmin clique em *Novo* na parte esquerda da tela.
--Insira o nome do banco de dados: ***clientes_hardness_db***, selecione o ***utf8_general_ci***, e aperte o botão **Criar**.
--No menu superior selecione **Importar**.
--Em **Arquivo a importar:** escolha o arquivo ***clientes_tb.sql***.
--Dessa ate o final da pagina e aperte **Importar**.
--No menu superior clique em **Estrutura**, depois **clientes_tb** (abaixo de **Tabela**).
+**CONFIGURAÇÃO**
 
--Adicione a pasta */crud* ao */xampp/htdocs* e abra no navegador ***localhost/crud***.
+- Para exportar o banco de dados basta dar Start no Mysql pelo XAMPP e clicar em Admin.
+- No phpMyAdmin clique em *Novo* na parte esquerda da tela.
+- Insira o nome do banco de dados: ***clientes_hardness_db***, selecione o ***utf8_general_ci***, e aperte o botão **Criar**.
+- No menu superior selecione **Importar**.
+- Em **Arquivo a importar:** escolha o arquivo ***clientes_tb.sql***.
+- Dessa ate o final da pagina e aperte **Importar**.
+- No menu superior clique em **Estrutura**, depois **clientes_tb** (abaixo de **Tabela**).
+
+- Adicione a pasta */crud* ao */xampp/htdocs* e abra no navegador ***localhost/crud***.
