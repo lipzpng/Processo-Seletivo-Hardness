@@ -1,0 +1,144 @@
+.lista {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 135px;
+    min-height: 500px;
+    background: url("../svg/BGNodes.svg");
+    background-size: 55%;
+
+    #alerta {
+        margin: 20px 0;
+        padding: 20px 15px;
+        border-radius: 10px;
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+
+    }
+    
+    .positivo{
+        border: 1px solid #abbfb4;
+        background-color: #d4eeda;
+    }
+
+    .negativo {
+        border: 1px solid #c7b2b9;
+        background-color: #f7d7d9;
+    }
+    
+    .hide {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        /* Aguarda a transição da opacidade para esconder completamente */
+        display: none;
+    }
+
+
+    .btn-novoCliente {
+        display: flex;
+
+        a {
+            text-decoration: none;
+
+            button {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 12px 15px;
+                gap: 10px;
+                border: none;
+                border-radius: 20px 10px 10px 10px;
+                background-color: var(--blue);
+                font-size: 15px;
+                color: var(--gray);
+            }
+        }
+    }
+
+    /* ------------ Tabela ------------ */
+    table {
+        width: 100%;
+        margin: 20px 0;
+        border-spacing: 0;
+        border-radius: 40px 20px 20px 20px;
+        overflow: hidden;
+        font-size: 18px;
+        text-align: left;
+
+        thead {
+            background-color: var(--blue);
+
+            th:first-child {
+                text-align: center;
+            }
+
+            tr {
+                border: 1px solid #ddd;
+
+                th {
+                    padding: 12px 8px;
+                    font-size: 15px;
+                    color: white;
+                    font-weight: bold;
+                }
+            }
+        }
+
+        tbody {
+            td:first-child {
+                text-align: center;
+            }
+
+            tr:nth-child(even) {
+                background-color: #f2f2f2;
+            }
+
+            tr:hover {
+                background-color: #ddd;
+            }
+
+            td {
+                padding: 5px;
+                border: 1px solid #ddd;
+            }
+        }
+    }
+
+    .btn-tabela {
+        display: flex;
+        justify-content: space-around;
+
+        a button {
+            cursor: pointer;
+            padding: 5px 7px;
+            border: none;
+            border-radius: 5px;
+            font-size: 15px;
+        }
+
+        .edit-btn {
+            background-color: var(--blue);
+            color: white;
+        }
+
+        .edit-btn:hover {
+            background-color: var(--dark-blue);
+        }
+
+        .delete-btn {
+            background-color: #de0000;
+            color: white;
+        }
+
+        .delete-btn:hover {
+            background-color: #af1010;
+        }
+    }
+}
+
+.sem-nada {
+    text-align: center;
+    font-weight: 600;
+    background-color: white;
+}
