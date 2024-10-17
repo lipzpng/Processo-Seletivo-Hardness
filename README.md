@@ -38,7 +38,7 @@ Estrutura do Banco:
   Atributos:
   * id - AUTO_INCREMENT INT
   * nome_cliente - VARCHAR(255) NOT NULL
-  * telefone_cliente - VARCHAR(255) NOT NULL
+  * telefone_cliente - VARCHAR(14) NOT NULL
   * endereco_cliente - VARCHAR(255) NOT NULL
 
 **CONFIGURAÇÃO**
