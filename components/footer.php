@@ -7,7 +7,6 @@
                 <ul>
                     <li><a href="index.php">home</a></li>
                     <li><a href="listagem.php">crud</a></li>
-                    <!-- <li><a href="">contato</a></li> -->
                 </ul>
             </div>
 
@@ -34,6 +33,7 @@
         </div>
     </footer>
 
+    <!-- Link de configuração do fontawesome para os icones -->
     <script src="https://kit.fontawesome.com/e17cdc3697.js" crossorigin="anonymous"></script>
 </body>
 

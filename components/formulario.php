@@ -1,5 +1,7 @@
+<!-- CSS especifico deste Component -->
 <link rel="stylesheet" href="./css/formulario.css" />
 
+<!-- Configuração necessaria para que quando este Component for usado para cadastro não exibir nenhum dado nos inputs -->
 <?php
 $obCliente = $obCliente ?? (object)[
     'nome_cliente' => '',
@@ -8,8 +10,11 @@ $obCliente = $obCliente ?? (object)[
 ];
 ?>
 
+<!-- Inicio do Html -->
+<!-- Conteudo da cadastrar.php e editar.php -->
 <main class="formulario">
 
+    <!-- Exibe o titulo conforme a pagina utilizando este Component -->
     <h2><?=TITLE?></h2>
 
     <div>
@@ -18,7 +23,10 @@ $obCliente = $obCliente ?? (object)[
         </a>
     </div>
 
+    <!-- Formulario de POST / UPDATE -->
     <form method="post">
+
+        <!-- Inputs -->
         <section>
             <div>
                 <label>Nome</label>
@@ -35,21 +43,26 @@ $obCliente = $obCliente ?? (object)[
             <input type="text" name="endereco" placeholder="Endereço" value="<?=$obCliente->endereco_cliente?>"required>
         </div>
 
+        <!-- Botão enviar -->
         <div>
             <button type="submit">ENVIAR</button>
         </div>
     </form>
 
+    <!-- Mascara para que o input de telefone coloque os parenteses, espaços e hifen de forma automatica -->
     <script>
-    function mascaraTelefone(input) {
-        let telefone = input.value;
+        function mascaraTelefone(input) {
+            let telefone = input.value;
 
-        telefone = telefone.replace(/\D/g, '');
+            //Remove qualquer caractere que não seja número
+            telefone = telefone.replace(/\D/g, '');
 
-        telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2');
-        telefone = telefone.replace(/(\d{4})(\d)/, '$1-$2');
+            //Adiciona os parenteses, espaço e o hhfen
+            telefone = telefone.replace(/^(\d{2})(\d)/, '($1) $2');
+            telefone = telefone.replace(/(\d{4})(\d)/, '$1-$2');
 
-        input.value = telefone.substring(0, 14);
-    }
-</script>
+            //Limita o comprimento para 14 caracteres no máximo "(00) 0000-0000")
+            input.value = telefone.substring(0, 14);
+        }
+    </script>
 </main>

@@ -1,7 +1,9 @@
+<!-- CSS especifico deste Component -->
 <link rel="stylesheet" href="./css/lista.css" />
 
 <?php
 
+//Mensagem de Status caso tenha sido feita alguma ação
 $mensagem = "";
 if (isset($_GET["status"])) {
     switch ($_GET["status"]) {
@@ -15,6 +17,7 @@ if (isset($_GET["status"])) {
     }
 }
 
+//Configura asinformações vindas do banco
 $resultados = "";
 foreach ($clientes as $cliente) {
     $resultados .= 
@@ -30,6 +33,7 @@ foreach ($clientes as $cliente) {
     </tr>";
 }
 
+//Se não houver nenhum dado no banco aparece uma mensagem na tabela
 $resultados = strlen($resultados) ? $resultados :   
 "<tr>
     <td colspan='6' class='sem-nada'>Nenhum cliente encontrado
@@ -38,10 +42,14 @@ $resultados = strlen($resultados) ? $resultados :
 
 ?>
 
+<!-- Inicio do Html -->
+<!-- Conteudo da listagem.php -->
 <main class="lista">
 
+    <!-- Mensagem de Status -->
     <?= $mensagem ?>
 
+    <!-- Script para que a mensagem seja encondida -->
     <script>
         window.onload = function() {
             var alerta = document.getElementById('alerta');
@@ -57,12 +65,14 @@ $resultados = strlen($resultados) ? $resultados :
         };
     </script>
 
+    <!-- Botão de redirecionamento para novo cadastro -->
     <div class="btn-novoCliente">
         <a href="cadastrar.php">
             <button>NOVO CLIENTE</button>
         </a>
     </div>
 
+    <!-- Tabela para READ-->
     <section>
         <table>
             <thead>
@@ -75,6 +85,7 @@ $resultados = strlen($resultados) ? $resultados :
                 </tr>
             </thead>
             <tbody>
+                <!-- Exibe dados vindo do banco -->
                 <?= $resultados ?>
             </tbody>
         </table>

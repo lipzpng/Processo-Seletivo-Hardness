@@ -18,7 +18,6 @@
         <ul>
             <li><a href="index.php">HOME</a></li>
             <li><a href="listagem.php">CRUD</a></li>
-            <!-- <li><a href="">CONTATO</a></li> -->
         </ul>
         <a href="https://www.linkedin.com/in/felipe-kadanos/">
             <button><i class="far fa-user"></i>DESENVOLVEDOR</button>

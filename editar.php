@@ -1,7 +1,9 @@
 <?php
+//Pagina de UPDATE do CRUD
 
 require("./vendor/autoload.php");
 
+//Define titulo especifico pois o cadastrar.php usa o mesmo Component para fazer a interface
 define("TITLE","EDITAR CLIENTE");
 
 use \App\Entity\Cliente;
@@ -21,15 +23,17 @@ if(!$obCliente instanceof Cliente) {
     exit;
 }
 
-//Validação do POST
+//Validação do POST para UPDATE
 if(isset($_POST["nome"], $_POST["telefone"], $_POST["endereco"])){
 
     $obCliente->nome_cliente = $_POST["nome"];
     $obCliente->telefone_cliente = $_POST["telefone"];
     $obCliente->endereco_cliente = $_POST["endereco"];
     
+    //Função de Update
     $obCliente->atualizar();
 
+    //Status da ação de update
     header("location: listagem.php?status=success");
     exit;
 }

@@ -1,4 +1,5 @@
 <?php
+//Pagina de DELETE do CRUD
 
 require("./vendor/autoload.php");
 
@@ -19,10 +20,13 @@ if(!$obCliente instanceof Cliente) {
     exit;
 }
 
-//Validação do POST
+//Validação do POST para DELETE
 if(isset($_POST["excluir"])){
+
+    //Função de Delete
     $obCliente->excluir();
 
+    //Status da ação de delete
     header("location: listagem.php?status=success");
     exit;
 }
