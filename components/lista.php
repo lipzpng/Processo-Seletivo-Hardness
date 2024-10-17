@@ -17,7 +17,7 @@ if (isset($_GET["status"])) {
     }
 }
 
-//Configura asinformações vindas do banco
+//Configura as informações vindas do banco
 $resultados = "";
 foreach ($clientes as $cliente) {
     $resultados .= 
@@ -36,8 +36,7 @@ foreach ($clientes as $cliente) {
 //Se não houver nenhum dado no banco aparece uma mensagem na tabela
 $resultados = strlen($resultados) ? $resultados :   
 "<tr>
-    <td colspan='6' class='sem-nada'>Nenhum cliente encontrado
-    </td>
+    <td colspan='6' class='sem-nada'>Nenhum cliente encontrado</td>
 </tr>";
 
 ?>
