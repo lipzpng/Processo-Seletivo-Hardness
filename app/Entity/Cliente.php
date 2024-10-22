@@ -29,7 +29,13 @@ class Cliente{
      * Endereço do cliente
      * @var string
      */
-    public $endereco_cliente;
+    public $endereco_cliente;    
+    
+    /**
+    * Endereço do cliente
+    * @var string
+    */
+   public $cidade_cliente;
 
     /**
      * Cadastrar novo cliente no banco
@@ -41,7 +47,8 @@ class Cliente{
         $this->id = $obDatabase->insert([
             "nome_cliente"=> $this->nome_cliente,
             "telefone_cliente"=> $this->telefone_cliente,
-            "endereco_cliente"=> $this->endereco_cliente
+            "endereco_cliente"=> $this->endereco_cliente,
+            "cidade_cliente"=> $this->cidade_cliente
         ]);
 
         return true;
@@ -55,7 +62,9 @@ class Cliente{
         return (new Database("clientes_tb"))->update("id = ".$this->id,[
             "nome_cliente"=> $this->nome_cliente,
             "telefone_cliente"=> $this->telefone_cliente,
-            "endereco_cliente"=> $this->endereco_cliente
+            "endereco_cliente"=> $this->endereco_cliente,
+            "cidade_cliente"=> $this->cidade_cliente
+
         ]);
     }
 

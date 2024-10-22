@@ -6,7 +6,8 @@
 $obCliente = $obCliente ?? (object)[
     'nome_cliente' => '',
     'telefone_cliente' => '',
-    'endereco_cliente' => ''
+    'endereco_cliente' => '',
+    'cidade_cliente' => ''
 ];
 ?>
 
@@ -30,7 +31,7 @@ $obCliente = $obCliente ?? (object)[
         <section>
             <div>
                 <label>Nome</label>
-                <input type="text" name="nome" placeholder="Nome" value="<?=$obCliente->nome_cliente?>" required>
+                <input type="text" name="nome" placeholder="Nome" value="<?=$obCliente->nome_cliente?>" >
             </div>
             <div>
                 <label>Telefone</label>
@@ -41,6 +42,11 @@ $obCliente = $obCliente ?? (object)[
         <div>
             <label>Endereço</label>
             <input type="text" name="endereco" placeholder="Endereço" value="<?=$obCliente->endereco_cliente?>"required>
+        </div>
+
+        <div>
+            <label>Cidade</label>
+            <input type="text" name="cidade" placeholder="Cidade" value="<?=$obCliente->cidade_cliente?>">
         </div>
 
         <!-- Botão enviar -->

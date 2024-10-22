@@ -26,6 +26,7 @@ foreach ($clientes as $cliente) {
         <td>$cliente->nome_cliente</td>
         <td>$cliente->telefone_cliente</td>
         <td>$cliente->endereco_cliente</td>
+        <td>$cliente->cidade_cliente</td>
         <td class='btn-tabela'>
             <a href='editar.php?id=$cliente->id'><button class='edit-btn'><i class='fa-regular fa-pen-to-square'></i></button></a>
             <a href='excluir.php?id=$cliente->id'><button class='delete-btn'><i class='fa-regular fa-trash-can'></i></button></a>
@@ -80,6 +81,7 @@ $resultados = strlen($resultados) ? $resultados :
                     <th>NOME</th>
                     <th>TELEFONE</th>
                     <th>ENDEREÇO</th>
+                    <th>Cidade</th>
                     <th>AÇÕES</th>
                 </tr>
             </thead>
